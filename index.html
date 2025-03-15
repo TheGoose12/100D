@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100 Day Discipline Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <nav>
+            <div class="app-logo">
+                <span>100</span>
+            </div>
+            <ul>
+                <li><button id="nav-progress" class="nav-btn active"></button></li>
+                <li><button id="nav-daily" class="nav-btn"></button></li>
+                <li><button id="nav-timeline" class="nav-btn"></button></li>
+                <li><button id="nav-config" class="nav-btn"></button></li>
+            </ul>
+        </nav>
+        <header>
+            <h1>100 Day Discipline Challenge</h1>
+        </header>
+
+        <main>
+            <!-- Progress View -->
+            <section id="progress-view" class="view active">
+                <h2>Progress Overview</h2>
+                <div class="challenge-dates">
+                    <div class="date-info">
+                        <span class="date-label">Start Date:</span>
+                        <span id="display-start-date" class="date-value"></span>
+                    </div>
+                    <div class="date-info">
+                        <span class="date-label">End Date:</span>
+                        <span id="display-end-date" class="date-value"></span>
+                    </div>
+                </div>
+                <div class="progress-summary">
+                    <div class="progress-card">
+                        <h3>Days Completed</h3>
+                        <div class="progress-circle">
+                            <span id="days-completed">0</span>/<span id="total-days">100</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div id="days-progress-bar" class="progress-bar"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-card">
+                        <h3>Total Points</h3>
+                        <div class="points-display" id="total-points">0</div>
+                    </div>
+                </div>
+                
+                <div class="challenge-progress">
+                    <h3>Challenge Progress</h3>
+                    <div id="challenge-items-progress"></div>
+                </div>
+                
+                <div class="streak-section">
+                    <h3>Current Streak</h3>
+                    <div class="streak-display">
+                        <span id="current-streak">0</span> days
+                    </div>
+                    <h4>Longest Streak</h4>
+                    <div class="streak-display small">
+                        <span id="longest-streak">0</span> days
+                    </div>
+                </div>
+            </section>
+
+            <!-- Daily Focus View -->
+            <section id="daily-view" class="view">
+                <div class="day-header">
+                    <h2>Day <span id="current-day-number">1</span></h2>
+                    <p id="current-date"></p>
+                </div>
+                
+                <div class="daily-checklist">
+                    <h3>Today's Challenges</h3>
+                    <form id="daily-challenges-form"></form>
+                </div>
+                
+                <div class="daily-affirmation">
+                    <h3>Daily Affirmation</h3>
+                    <p id="affirmation-text">I am disciplined, focused, and committed to becoming my best self.</p>
+                </div>
+                
+                <div class="motivation-section">
+                    <h3>Motivation</h3>
+                    <div class="video-container" id="video-container">
+                        <!-- Video will be inserted here -->
+                    </div>
+                    <button id="new-video-btn" class="secondary-btn">New Video</button>
+                </div>
+                
+                <div class="action-buttons">
+                    <button id="print-daily-btn" class="primary-btn">Print Daily View</button>
+                    <button id="save-daily-btn" class="primary-btn">Save Progress</button>
+                </div>
+            </section>
+
+            <!-- Timeline View -->
+            <section id="timeline-view" class="view">
+                <h2>Challenge Timeline</h2>
+                <div class="timeline-controls">
+                    <button id="prev-month" class="icon-btn">◀</button>
+                    <h3 id="timeline-month-year">Month Year</h3>
+                    <button id="next-month" class="icon-btn">▶</button>
+                </div>
+                <div id="timeline-container" class="timeline-container">
+                    <!-- Timeline days will be generated here -->
+                </div>
+            </section>
+
+            <!-- Config View -->
+            <section id="config-view" class="view">
+                <h2>Challenge Configuration</h2>
+                
+                <div class="config-section">
+                    <h3>Start Date</h3>
+                    <div class="date-picker">
+                        <input type="date" id="start-date" class="date-input">
+                    </div>
+                </div>
+                
+                <div class="config-section">
+                    <h3>Challenge Items</h3>
+                    <div id="challenge-items-config">
+                        <!-- Challenge item forms will be inserted here -->
+                    </div>
+                    <button id="add-challenge-btn" class="secondary-btn">+ Add Challenge</button>
+                </div>
+                
+                <div class="config-section">
+                    <h3>Reset Challenge</h3>
+                    <p class="warning-text">Warning: This will clear all your progress data</p>
+                    <button id="reset-challenge-btn" class="danger-btn">Reset Everything</button>
+                </div>
+                
+                <div class="action-buttons">
+                    <button id="save-config-btn" class="primary-btn">Save Configuration</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Print Template -->
+    <div id="print-template" class="print-only">
+        <h1>100 Day Discipline Challenge</h1>
+        <h2>Day <span id="print-day-number">1</span> - <span id="print-date"></span></h2>
+        
+        <div class="print-checklist">
+            <h3>Today's Challenges</h3>
+            <div id="print-challenges"></div>
+        </div>
+        
+        <div class="print-affirmation">
+            <h3>Daily Affirmation</h3>
+            <p id="print-affirmation"></p>
+        </div>
+        
+        <div class="print-notes">
+            <h3>Notes</h3>
+            <div class="notes-lines"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "startDate": "2025-03-14",
+  "challengeItems": [
+    {
+      "name": "Run",
+      "target": 3,
+      "metric": "miles"
+    },
+    {
+      "name": "Read",
+      "target": 30,
+      "metric": "minutes"
+    },
+    {
+      "name": "Meditate",
+      "target": 10,
+      "metric": "minutes"
+    }
+  ],
+  "days": [],
+  "currentStreak": 0,
+  "longestStreak": 0
+}
